@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/736x/dd/38/80/dd3880d1042b676a6d588ef9158557ed.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+    }
+
+    .side-menu {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .side-menu nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 10px;
+      padding: 10px;
+      background-color: rgba(51, 51, 51, 0.8);
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .side-menu nav a:hover {
+      background-color: rgba(100, 100, 100, 0.8);
+      color: white;
+    }
+
+    .logo-container {
+      width: 80px;
+      height: 80px;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .content {
+      margin-top: 120px;
+      padding: 20px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: white;
+    }
+
+    .platform-info,
+    .docker-info {
+      margin-bottom: 60px;
+    }
+
+    .images-container {
+      text-align: center;
+      position: relative;
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .images-container img {
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      user-select: none;
+      z-index: 5;
+    }
+
+    .arrow.left {
+      left: 0;
+    }
+
+    .arrow.right {
+      right: 0;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .content {
+        font-size: 18px;
+        padding: 15px;
+      }
+
+      .side-menu nav a {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .logo-container {
+        width: 60px;
+        height: 60px;
+      }
+
+      .images-container img {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      .side-menu nav a {
+        font-size: 12px;
+        padding: 6px;
+      }
+
+      .logo-container {
+  width: 80px;
+  height: 80px;
+  position:;
+  top: 20px;
+  right: 35px; /* Adjust this value to move the logo left */
+  z-index: 10;
+}
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header with Navigation and Logo -->
+  <div class="header">
+    <div class="side-menu">
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="services.html">Services</a>
+        <a href="upload.html">Upload File</a>
+      </nav>
+    </div>
+    <div class="logo-container">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.o8-DwdnizQZLwNs2xC8qtgHaHa&pid=Api&P=0&h=180" alt="Logo">
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="platform-info">
+      <h2 style="color:black">What Does Our Platform Do?</h2>
+      <p style="color:black;">
+        MS Hosting is a platform that allows you to easily deploy your applications in a secure, reliable, and scalable
+        environment using Docker technology. We provide you with the tools to upload your application files in a
+        convenient zip format, which our platform will extract and deploy within a Docker container.
+      </p>
+      <p style="color:black;">
+        Our platform simplifies the process of application deployment, enabling you to focus on building and improving
+        your software while we handle the complexities of hosting. With automated Docker builds, your application is
+        quickly up and running, accessible via the internet, and scalable according to your needs.
+      </p>
+    </div>
+
+    <div class="images-container">
+      <span class="arrow left" onclick="prevImage()">&#10094;</span>
+      <img id="image" src="https://www.dummies.com/wp-content/uploads/494455.image0.jpg" alt="Hosted Application Image">
+      <span class="arrow right" onclick="nextImage()">&#10095;</span>
+    </div>
+
+    <div class="docker-info">
+      <h2 style="color:">What is Docker?</h2>
+      <p style="color:white;">
+        Docker is a tool designed to make it easier to create, deploy, and run applications by using containers.
+        Containers allow a developer to package up an application with all the parts it needs, such as libraries and
+        other dependencies, and ship it all out as one package. By doing so, thanks to the container, the developer can
+        rest assured that the application will run on any other Linux machine regardless of any customized settings that
+        machine might have that could differ from the machine used for writing and testing the code.
+      </p>
+      <p style="color:white;">
+        At MS Hosting, we leverage Docker to provide isolated environments for your applications, ensuring consistency
+        across various deployment environments. Docker containers are lightweight and provide all the necessary
+        components for your application to run smoothly and efficiently.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      "https://www.dummies.com/wp-content/uploads/494455.image0.jpg",
+      "https://www.bytewebster.com/javascriptprojects/uploads/images/animated-file-upload-modal2.png",
+      "https://tse2.mm.bing.net/th?id=OIP.JBqZG-SCcY4TNx96iEOojQHaD_&pid=Api&P=0&h=180",
+    ];
+    let currentImageIndex = 0;
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      document.getElementById('image').src = images[currentImageIndex];
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      document.getElementById('image').src = images[currentImageIndex];
+    }
+  </script>
+</body>
+
+</html>
